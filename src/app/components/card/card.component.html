@@ -1,0 +1,15 @@
+<mat-card class="card">
+    <mat-card-header>
+      <mat-card-title>Nice!</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="{{ currentEmployee.image }}" alt="{{ currentEmployee.name }}}">
+    <mat-card-content>
+      <p>
+        {{ currentEmployee.position }}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+
+      <button *ngFor="let item of randomEmployees" (click)='onAnswerButtonClick()' mat-button>{{ item.name }}</button>
+    </mat-card-actions>
+  </mat-card>
